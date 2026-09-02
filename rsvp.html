@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pedro & Lola · Confirmación</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- CABECERA -->
+
+    <header>
+
+        <nav>
+
+            <a href="index.html" class="logo">
+                Pedro & Lola
+            </a>
+
+            <div class="idiomas">
+
+                <button id="es-btn" class="idioma-activo">
+                    ES
+                </button>
+
+                <span>·</span>
+
+                <button id="fr-btn">
+                    FR
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- FORMULARIO -->
+
+    <main>
+
+        <section class="seccion seccion-clara">
+
+            <p class="etiqueta"
+               data-es="RSVP"
+               data-fr="RSVP">
+                RSVP
+            </p>
+
+
+            <h1
+                data-es="¿Nos acompañas?"
+                data-fr="Serez-vous des nôtres ?">
+                ¿Nos acompañas?
+            </h1>
+
+
+            <p class="texto-intro"
+               data-es="Confirma tu asistencia y déjanos algunos datos para poder organizarlo todo."
+               data-fr="Confirmez votre présence et laissez-nous quelques informations pour nous aider à tout organiser.">
+                Confirma tu asistencia y déjanos algunos datos
+                para poder organizarlo todo.
+            </p>
+
+
+           <form class="formulario" id="formulario-rsvp">
+
+
+                <!-- 1. NOMBRE -->
+
+                <div class="campo">
+
+                    <label for="nombre"
+                           data-es="1. Nombre y apellidos"
+                           data-fr="1. Nom et prénom">
+                        1. Nombre y apellidos
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- 2. ACOMPAÑANTE ADULTO -->
+
+                <div class="campo">
+
+                    <label
+                        data-es="2. ¿Vienes con acompañante adulto?"
+                        data-fr="2. Venez-vous avec un accompagnant adulte ?">
+                        2. ¿Vienes con acompañante adulto?
+                    </label>
+
+                    <p class="nota"
+   data-es="Si venís con niños, poneos en contacto con nosotros."
+   data-fr="Si vous venez avec des enfants, contactez-nous.">
+    Si venís con niños, poneos en contacto con nosotros.
+</p>
+
+
+                    <div class="opciones">
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="acompanante"
+                                value="si"
+                                required
+                            >
+
+                            <span
+                                data-es="Sí"
+                                data-fr="Oui">
+                                Sí
+                            </span>
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="acompanante"
+                                value="no"
+                            >
+
+                            <span
+                                data-es="No"
+                                data-fr="Non">
+                                No
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 3. NOMBRE ACOMPAÑANTE -->
+
+                <div class="campo"
+                     id="campo-acompanante"
+                     style="display: none;">
+
+                    <label
+                        for="nombre-acompanante"
+                        data-es="3. Nombre y apellidos del acompañante"
+                        data-fr="3. Nom et prénom de l'accompagnant(e)">
+                        3. Nombre y apellidos del acompañante
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre-acompanante"
+                        name="nombre-acompanante"
+                    >
+
+                </div>
+
+
+
+                <!-- 4. AUTOBÚS -->
+
+                <div class="campo">
+
+                    <label
+                        for="autobus"
+                        data-es="6. ¿Utilizarás el autobús?"
+                        data-fr="6. Utiliserez-vous le bus ?">
+                        6. ¿Utilizarás el autobús?
+                    </label>
+
+
+                    <select
+                        id="autobus"
+                        name="autobus"
+                        required>
+
+                        <option
+                            value=""
+                            data-es="Selecciona una opción"
+                            data-fr="Sélectionnez une option">
+                            Selecciona una opción
+                        </option>
+
+                        <option
+                            value="trescantos"
+                            data-es="Sí, desde Tres Cantos"
+                            data-fr="Oui, depuis Tres Cantos">
+                            Sí, desde Tres Cantos
+                        </option>
+
+                        <option
+                            value="plazacastilla"
+                            data-es="Sí, desde Plaza Castilla"
+                            data-fr="Oui, depuis Plaza Castilla">
+                            Sí, desde Plaza Castilla
+                        </option>
+
+                        <option
+                            value="no"
+                            data-es="No utilizaré el autobús"
+                            data-fr="Non, je n'utiliserai pas le bus">
+                            No utilizaré el autobús
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- 7. ALERGIAS -->
+
+                <div class="campo">
+
+                    <label
+                        for="alergias"
+                        data-es="7. Alergias o intolerancias"
+                        data-fr="7. Allergies ou intolérances">
+                        7. Alergias o intolerancias
+                    </label>
+
+                    <textarea
+                        id="alergias"
+                        name="alergias"
+                        rows="4"
+                        data-placeholder-es="Indica aquí cualquier alergia o intolerancia."
+                        data-placeholder-fr="Indiquez ici toute allergie ou intolérance.">
+                    </textarea>
+
+                </div>
+
+
+                <!-- 8. CANCIÓN -->
+
+                <div class="campo">
+
+                    <label
+                        for="cancion"
+                        data-es="8. ¿Qué canción no puede faltar en la fiesta?"
+                        data-fr="8. Quelle chanson ne peut pas manquer à la fête ?">
+                        8. ¿Qué canción no puede faltar en la fiesta?
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cancion"
+                        name="cancion"
+                        data-placeholder-es="Una canción para la fiesta..."
+                        data-placeholder-fr="Une chanson pour la fête...">
+
+                </div>
+
+
+                <!-- BOTÓN -->
+
+                <button
+                    type="submit"
+                    class="boton">
+
+                    <span
+                        data-es="Enviar confirmación →"
+                        data-fr="Envoyer la confirmation →">
+                        Enviar confirmación →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+            <div id="mensaje-confirmacion"
+     style="display: none;">
+
+    <p class="etiqueta"
+       data-es="GRACIAS"
+       data-fr="MERCI">
+        GRACIAS
+    </p>
+
+    <h2
+        data-es="¡Nos vemos el 6 de febrero! ♥"
+        data-fr="Rendez-vous le 6 février ! ♥">
+        ¡Nos vemos el 6 de febrero! ♥
+    </h2>
+
+    <p class="texto-intro"
+       data-es="Hemos recibido vuestra confirmación."
+       data-fr="Nous avons bien reçu votre confirmation.">
+        Hemos recibido vuestra confirmación.
+    </p>
+
+</div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE -->
+
+    <footer>
+
+        <h2>
+            Pedro & Lola
+        </h2>
+
+        <p>
+            06 · 02 · 2027
+        </p>
+
+        <p class="gracias"
+           data-es="Nos vemos allí ♥"
+           data-fr="On se retrouve là-bas ♥">
+            Nos vemos allí ♥
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <script>
+
+        /* ACOMPAÑANTE */
+
+        const opcionesAcompanante =
+            document.querySelectorAll(
+                'input[name="acompanante"]'
+            );
+
+        const campoAcompanante =
+            document.getElementById(
+                "campo-acompanante"
+            );
+
+        const nombreAcompanante =
+            document.getElementById(
+                "nombre-acompanante"
+            );
+
+
+        opcionesAcompanante.forEach(opcion => {
+
+            opcion.addEventListener("change", function () {
+
+                if (this.value === "si") {
+
+                    campoAcompanante.style.display = "block";
+
+                    nombreAcompanante.required = true;
+
+                } else {
+
+                    campoAcompanante.style.display = "none";
+
+                    nombreAcompanante.required = false;
+
+                    nombreAcompanante.value = "";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+    <script>
+
+    const formulario = document.getElementById("formulario-rsvp");
+
+    const URL_SCRIPT =
+        "https://script.google.com/macros/s/AKfycbyt_iSzZu6qki6G1_EZHO9aPQYeB7RrgsyOsmsY-UtrUJRknpWYZxAbHX_TUxtEg_KM3w/exec";
+
+
+    formulario.addEventListener("submit", async function(event) {
+
+        event.preventDefault();
+
+
+        const datos = {
+
+            nombre:
+                document.getElementById("nombre").value,
+
+            acompanante:
+                document.querySelector(
+                    'input[name="acompanante"]:checked'
+                ).value,
+
+            nombreAcompanante:
+                document.getElementById(
+                    "nombre-acompanante"
+                ).value,
+
+            autobus:
+                document.getElementById(
+                    "autobus"
+                ).value,
+
+            alergias:
+                document.getElementById(
+                    "alergias"
+                ).value,
+
+            cancion:
+                document.getElementById(
+                    "cancion"
+                ).value
+
+        };
+
+
+        try {
+
+            await fetch(URL_SCRIPT, {
+
+                method: "POST",
+
+                body: JSON.stringify(datos)
+
+            });
+
+
+         formulario.style.display = "none";
+
+document.getElementById("mensaje-confirmacion").style.display = "block";
+
+            document.getElementById(
+                "campo-acompanante"
+            ).style.display = "none";
+
+        } catch (error) {
+
+            alert(
+                "Ha ocurrido un problema. Por favor, inténtalo de nuevo."
+            );
+
+            console.error(error);
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>
